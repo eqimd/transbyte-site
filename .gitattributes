@@ -1,0 +1,6 @@
+backend/binaries/abc filter=lfs diff=lfs merge=lfs -text
+backend/binaries/aigtoaig filter=lfs diff=lfs merge=lfs -text
+backend/binaries/kissat filter=lfs diff=lfs merge=lfs -text
+backend/binaries/transbyte.jar filter=lfs diff=lfs merge=lfs -text
+frontend/editor.js filter=lfs diff=lfs merge=lfs -text
+frontend/worker.js filter=lfs diff=lfs merge=lfs -text

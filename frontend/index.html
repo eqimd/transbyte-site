@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>transbyte</title>
+<style type="text/css" media="screen">
+    #editorLeft { 
+        position: fixed;
+        top: 17%;
+        left: 12.5%;
+        height: 55%;
+        width: 37%;
+        border: 0.1rem solid;
+        border-radius:6px;
+    }
+    #editorRight { 
+        position: fixed;
+        height: 55%;
+        width: 37%;
+        right: 12.5%;
+        top: 17%;
+        border: 0.1rem solid;
+        float: right;
+        border-radius:6px;
+    }
+    .button_check_equiv {
+        position: relative;
+        display: block;
+        padding: 8px 16px;
+        margin: 0 auto;
+        margin-top: 5%;
+        background: #1f1b1b;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .button_check_equiv:active {
+        background: #4a4646;
+    }
+
+    .button_check_equiv_text {
+        font: bold 20px 'Roboto', san-serif;
+        color: #ffffff;
+        transition: all 0.2s;
+    }
+    .button_check_equiv_loading .button_check_equiv_text {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .button_check_equiv_loading::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 4px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: button-loading-spinner 1s ease infinite;
+    }
+
+    .textarea_output {
+        position: fixed;
+        height: 20%;
+        top: 75%;
+        left: 12.5%;
+        right: 12.5%;
+        border-radius:6px;
+        resize: none;
+        display: none;
+    }
+
+    @keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+</style>
+</head>
+<body style="background-color:#EEE">
+
+<div id="editorLeft"></div>
+
+<div id="editorRight"></div>
+
+<button class="button_check_equiv" type="button">
+    <span class="button_check_equiv_text">Check Equivalence</span>
+</button>
+
+<textarea readonly autofocus class="textarea_output">
+
+</textarea>
+    
+<script src="main.js" type="module" charset="utf-8"></script>
+</body>
+</html>

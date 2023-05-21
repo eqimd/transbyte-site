@@ -1,0 +1,5 @@
+package apiserver
+
+const (
+	RouteRoot = "/"
+)
