@@ -52,6 +52,8 @@ func (s *APIServer) setupRouterHandlers() {
 
 func (s *APIServer) handleRoot() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		
 		b, err := io.ReadAll(r.Body)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
