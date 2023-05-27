@@ -50,7 +50,7 @@ const checkEquivButton = document.querySelector(".button_check_equiv");
 const textAreaOutput = document.querySelector(".textarea_output");
 
 // const xmlHttp = new XMLHttpRequest();
-const URL = "http://localhost:534/";
+const URL = "http://localhost:8001/";
 
 // textAreaOutput.value = 'asdfasdfasfasdf'
 
